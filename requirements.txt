@@ -1,0 +1,11 @@
+Flask>=2.0
+requests>=2.25
+flasgger>=0.9.5
+pydantic>=1.10
+python-dotenv>=1.0
+tqdm>=4.64
+Flask-SQLAlchemy>=2.5
+Flask-Migrate>=3.1
+Flask-Caching>=2.0
+Flask-Login>=0.6
+openai>=1.0

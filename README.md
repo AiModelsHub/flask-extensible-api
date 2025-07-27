@@ -13,26 +13,34 @@ This project is a Flask-based backend service demonstrating:
 - Swagger UI available at `/apidocs/`
 
 ## Project Structure
-
+```
 app/
+├── __init__.py
 ├── core/
-│ ├── config.py # Configuration (loads .env)
-│ └── extensions.py # Flask extensions (if any)
+│   ├── __init__.py
+│   ├── config.py
+│   └── extensions.py
 ├── models/
-│ ├── init.py
-│ ├── response.py # Global API response model
-│ └── requests/
-│ ├── init.py
-│ └── burst_request.py # BurstRequest model
+│   ├── __init__.py
+│   ├── api_models.py
+│   ├── response.py
+│   └── requests/
+│       ├── init.py
+│       └── burst_request.py
 ├── routes/
-│ └── burst_routes.py # Flask route(s)
+│   ├── __init__.py
+│   ├── openai_routes.py
+│   └── burst_routes.py
 ├── services/
-│ ├── init.py
-│ ├── google_maps_service.py
-│ └── swagger_service.py # Swagger config
+│   ├── init.py
+│   ├── google_maps_service.py
+│   ├── openai_service.py
+│   └── swagger_service.py
 ├── utils/
-│ └── request_utils.py # Headers and data builders
-└── main.py # Flask app factory and entry point
+│   ├── init.py
+│   └── request_utils.py
+└── main.py
+```
 
 ## Setup
 
@@ -50,8 +58,7 @@ pip install -r requirements.txt
     DEBUG=True
 5. Run the app:
 python app/main.py
-6. Visit Swagger UI at:
-http://localhost:5000/apidocs/
+6. Visit Swagger UI at: http://localhost:5000/apidocs/
 
 ## Usage
 Use the `/api/run-burst` POST endpoint to trigger concurrent requests.  
